@@ -93,15 +93,15 @@ col1, col2 = st.columns(2)
 
 with col1:
     sample = {}
-    sample['road_type'] = st.selectbox("Road Type", ['urban', 'rural', 'highway', 'residential'])
+    sample['road_type'] = st.selectbox("Road Type", ['urban', 'rural', 'highway'])
     sample['num_lanes'] = st.slider("Number of Lanes", 1, 4, 2, 1)
     sample['speed_limit'] = st.slider("Speed Limit", 25, 70, 30, step=5)
     sample['curvature'] = st.slider("Road Curvature", 0.0, 1.0, 0.5, 0.01)
-    sample['weather'] = st.selectbox("Weather", ['clear', 'rainy', 'foggy', 'snowy'])
+    sample['weather'] = st.selectbox("Weather", ['clear', 'rainy', 'foggy'])
     sample['num_reported_accidents'] = st.slider("Number of Prior Reported Accidents in Area", 0, 100, 10, 1)
 
 with col2:
-    sample['time_of_day'] = st.selectbox("Time of Day", ['morning', 'afternoon', 'evening', 'night'])
+    sample['time_of_day'] = st.selectbox("Time of Day", ['morning', 'afternoon', 'evening'])
     sample['lighting'] = st.selectbox("Lighting Conditions", ['daylight', 'dim', 'night'])
     sample['road_signs_present'] = st.toggle("Road Signs Present", value=True)
     sample['public_road'] = st.toggle("Is it a public road?", value=True)
